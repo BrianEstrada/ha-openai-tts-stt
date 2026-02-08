@@ -1,0 +1,38 @@
+{
+  "config": {
+    "error": {
+      "invalid_api_key": "Invalid API key",
+      "unauthorized": "API key does not have the required permissions",
+      "cannot_connect": "Cannot connect to the API",
+      "unknown": "Unknown error occurred"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "api_key": "API Key",
+          "base_url": "API Base URL",
+          "stt_model": "STT Model",
+          "tts_model": "TTS Model",
+          "tts_voice": "TTS Voice"
+        },
+        "data_description": {
+          "base_url": "OpenAI-compatible API base URL. Change this to use alternative providers.",
+          "stt_model": "Model used for speech-to-text transcription",
+          "tts_model": "Model used for text-to-speech synthesis",
+          "tts_voice": "Default voice for text-to-speech"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "stt_model": "STT Model",
+          "tts_model": "TTS Model",
+          "tts_voice": "TTS Voice"
+        }
+      }
+    }
+  }
+}
