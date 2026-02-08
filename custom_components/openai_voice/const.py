@@ -23,13 +23,17 @@ DEFAULT_PROMPT = ""
 TTS_VOICES = [
     "alloy",
     "ash",
+    "ballad",
+    "cedar",
     "coral",
     "echo",
     "fable",
+    "marin",
     "nova",
     "onyx",
     "sage",
     "shimmer",
+    "verse",
 ]
 
 STT_MODELS = [
