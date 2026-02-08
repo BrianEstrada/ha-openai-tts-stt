@@ -1,0 +1,6 @@
+[project]
+name = "openai-voice"
+version = "0.1.0"
+description = "Home Assistant custom integration for OpenAI-powered speech-to-text and text-to-speech"
+requires-python = ">=3.13"
+dependencies = ["requests"]
