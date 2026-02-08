@@ -1,12 +1,14 @@
 {
-  "domain": "openai_voice",
-  "name": "OpenAI Voice",
-  "codeowners": [],
+  "domain": "openai_tts_stt",
+  "name": "OpenAI Text-To-Speech and Speech-To-Text",
+  "codeowners": [
+    "@brianestrada"
+  ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/brianestrada/home-assistant-scripts",
+  "documentation": "https://github.com/brianestrada/ha-openai-tts-stt",
   "iot_class": "cloud_push",
-  "issue_tracker": "https://github.com/brianestrada/home-assistant-scripts/issues",
+  "issue_tracker": "https://github.com/brianestrada/ha-openai-tts-stt/issues",
   "requirements": [],
-  "version": "0.1.0"
+  "version": "1.0.0"
 }
