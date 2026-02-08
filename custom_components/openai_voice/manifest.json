@@ -1,5 +1,5 @@
 {
-  "domain": "openai_tts_stt",
+  "domain": "openai_voice",
   "name": "OpenAI Text-To-Speech and Speech-To-Text",
   "codeowners": [
     "@brianestrada"
