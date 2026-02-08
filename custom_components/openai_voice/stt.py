@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 import asyncio
-from collections.abc import AsyncIterable
 import io
 import wave
+from collections.abc import AsyncIterable
 
 import requests
-
 from homeassistant.components.stt import (
     AudioBitRates,
     AudioChannels,
@@ -35,9 +34,9 @@ from .const import (
 
 
 async def async_setup_entry(
-    hass: HomeAssistant,
-    config_entry: ConfigEntry,
-    async_add_entities: AddEntitiesCallback,
+        hass: HomeAssistant,
+        config_entry: ConfigEntry,
+        async_add_entities: AddEntitiesCallback,
 ) -> None:
     """Set up OpenAI STT from a config entry."""
     async_add_entities(
@@ -56,11 +55,11 @@ class OpenAISTTEntity(SpeechToTextEntity):
     """OpenAI Whisper STT entity."""
 
     def __init__(
-        self,
-        api_key: str,
-        base_url: str,
-        model: str,
-        unique_id: str,
+            self,
+            api_key: str,
+            base_url: str,
+            model: str,
+            unique_id: str,
     ) -> None:
         self._api_key = api_key
         self._base_url = base_url
@@ -93,7 +92,7 @@ class OpenAISTTEntity(SpeechToTextEntity):
         return [AudioChannels.CHANNEL_MONO]
 
     async def async_process_audio_stream(
-        self, metadata: SpeechMetadata, stream: AsyncIterable[bytes]
+            self, metadata: SpeechMetadata, stream: AsyncIterable[bytes]
     ) -> SpeechResult:
         """Process audio stream and return transcription."""
         pcm_data = b""

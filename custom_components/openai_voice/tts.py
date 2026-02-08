@@ -3,11 +3,9 @@
 from __future__ import annotations
 
 import asyncio
-import json
 from typing import Any
 
 import requests
-
 from homeassistant.components.tts import TextToSpeechEntity, TtsAudioType
 from homeassistant.components.tts.models import Voice
 from homeassistant.config_entries import ConfigEntry
@@ -28,9 +26,9 @@ from .const import (
 
 
 async def async_setup_entry(
-    hass: HomeAssistant,
-    config_entry: ConfigEntry,
-    async_add_entities: AddEntitiesCallback,
+        hass: HomeAssistant,
+        config_entry: ConfigEntry,
+        async_add_entities: AddEntitiesCallback,
 ) -> None:
     """Set up OpenAI TTS from a config entry."""
     async_add_entities(
@@ -52,12 +50,12 @@ class OpenAITTSEntity(TextToSpeechEntity):
     _attr_supported_options = ["voice"]
 
     def __init__(
-        self,
-        api_key: str,
-        base_url: str,
-        model: str,
-        voice: str,
-        unique_id: str,
+            self,
+            api_key: str,
+            base_url: str,
+            model: str,
+            voice: str,
+            unique_id: str,
     ) -> None:
         self._api_key = api_key
         self._base_url = base_url
@@ -73,7 +71,7 @@ class OpenAITTSEntity(TextToSpeechEntity):
         return [Voice(voice_id=v, name=v) for v in TTS_VOICES]
 
     async def async_get_tts_audio(
-        self, message: str, language: str, options: dict[str, Any]
+            self, message: str, language: str, options: dict[str, Any]
     ) -> TtsAudioType:
         """Generate speech from text."""
         voice = options.get("voice", self._voice)

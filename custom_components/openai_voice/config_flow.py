@@ -5,9 +5,9 @@ from __future__ import annotations
 import asyncio
 from typing import Any
 
+import homeassistant.helpers.config_validation as cv
 import requests
 import voluptuous as vol
-
 from homeassistant import exceptions
 from homeassistant.config_entries import (
     ConfigEntry,
@@ -17,7 +17,6 @@ from homeassistant.config_entries import (
 )
 from homeassistant.const import CONF_API_KEY
 from homeassistant.core import callback
-import homeassistant.helpers.config_validation as cv
 
 from .const import (
     CONF_BASE_URL,
@@ -57,7 +56,7 @@ class OptionsFlowHandler(OptionsFlowWithConfigEntry):
     """Handle options."""
 
     async def async_step_init(
-        self, user_input: dict[str, Any] | None = None
+            self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         if user_input is not None:
             return self.async_create_entry(
@@ -98,12 +97,12 @@ class OpenAIVoiceConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(
-        config_entry: ConfigEntry,
+            config_entry: ConfigEntry,
     ) -> OptionsFlowHandler:
         return OptionsFlowHandler(config_entry)
 
     async def async_step_user(
-        self, user_input: dict[str, Any] | None = None
+            self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         errors: dict[str, str] = {}
 
